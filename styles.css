@@ -31,9 +31,9 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.78), rgba(30, 41, 59, 0.42)),
-    url("images/fundo.svg") no-repeat center center;
-  background-size: cover;
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.28), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.25), transparent 28%),
+    linear-gradient(135deg, #0f172a 0%, #111827 42%, #1e293b 100%);
   background-attachment: fixed;
 }
 
@@ -41,7 +41,15 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6), rgba(30, 41, 59, 0.28));
+  background:
+    linear-gradient(120deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.28)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 2px,
+      transparent 2px,
+      transparent 18px
+    );
   z-index: -1;
 }
 
